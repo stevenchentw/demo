@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :set_event, :only => [ :show, :edit, :update, :destroy]
    
   def index
-  	@events = Event.page(params[:page]).per(10)
+  	@events = Event.page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
